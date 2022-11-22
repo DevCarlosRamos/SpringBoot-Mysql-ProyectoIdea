@@ -17,17 +17,15 @@ public class NoteModel {
     private Long id;
 
     private int age;
-
-    @Column(nullable = false)
     private String description;
 
     public NoteModel() {
     }
 
-    public NoteModel(Long id, int age, String decription) {
+    public NoteModel(Long id, int age, String description) {
         this.id = id;
         this.age = age;
-        this.description = decription;
+        this.description = description;
     }
 
     public Long getId() {
@@ -46,12 +44,12 @@ public class NoteModel {
         this.age = age;
     }
 
-    public String getDecription() {
+    public String getDescription() {
         return description;
     }
 
-    public void setDecription(String decription) {
-        this.description = decription;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
 }
