@@ -22,21 +22,25 @@ public class NoteController {
     @Autowired
     NoteService noteService;
 
+    // Nos muestra todas las publicaciones
     @GetMapping()
     public ArrayList<NoteModel> getNotes() {
         return noteService.getNotes();
     }
 
+    // Crea una publicacion
     @PostMapping()
     public NoteModel createNote(@RequestBody NoteModel note) {
         return noteService.createNote(note);
     }
 
+    // Nos muetra una publicacion
     @GetMapping(path = "/{id}")
     public Optional<NoteModel> getNote(@PathVariable("id") Long id) {
         return noteService.getNote(id);
     }
 
+    // Elimina una publicacion
     @DeleteMapping(path = "/{id}")
     public boolean removeNote(@PathVariable("id") Long id) {
         return noteService.removeNote(id);

@@ -11,16 +11,19 @@ import javax.persistence.Table;
 @Table(name = "note")
 public class NoteModel {
 
+    // ID por numero
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(unique = true, nullable = false)
     private Long id;
 
+    // Variables
     private int age;
     private String description;
     private String country;
     private char gender;
 
+    // Metodos
     public NoteModel() {
     }
 

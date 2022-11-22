@@ -15,18 +15,22 @@ public class NoteService {
     @Autowired
     NoteRepository noteRepository;
 
+    // Trae todas las filas
     public ArrayList<NoteModel> getNotes() {
         return (ArrayList<NoteModel>) noteRepository.findAll();
     }
 
+    // Crea o actuliza una nueva fila
     public NoteModel createNote(NoteModel note) {
         return noteRepository.save(note);
     }
 
+    // Muestra una fila
     public Optional<NoteModel> getNote(Long id) {
         return noteRepository.findById(id);
     }
 
+    // Elimina una fila
     public boolean removeNote(Long id) {
 
         try {
