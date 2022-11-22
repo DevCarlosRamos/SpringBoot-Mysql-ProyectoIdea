@@ -1,6 +1,7 @@
 package ProyectIdea.services;
 
 import java.util.ArrayList;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -21,4 +22,19 @@ public class NoteService {
     public NoteModel createNote(NoteModel note) {
         return noteRepository.save(note);
     }
+
+    public Optional<NoteModel> getNote(Long id) {
+        return noteRepository.findById(id);
+    }
+
+    public boolean removeNote(Long id) {
+
+        try {
+            noteRepository.deleteById(id);
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
 }
