@@ -18,14 +18,18 @@ public class NoteModel {
 
     private int age;
     private String description;
+    private String country;
+    private char gender;
 
     public NoteModel() {
     }
 
-    public NoteModel(Long id, int age, String description) {
+    public NoteModel(Long id, int age, String description, String country, char gender) {
         this.id = id;
         this.age = age;
         this.description = description;
+        this.country = country;
+        this.gender = gender;
     }
 
     public Long getId() {
@@ -50,6 +54,22 @@ public class NoteModel {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
+
+    public char getGender() {
+        return gender;
+    }
+
+    public void setGender(char gender) {
+        this.gender = gender;
     }
 
 }
