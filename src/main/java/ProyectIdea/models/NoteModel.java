@@ -27,7 +27,7 @@ public class NoteModel {
     public NoteModel(Long id, int age, String decription) {
         this.id = id;
         this.age = age;
-        this.decription = decription;
+        this.description = decription;
     }
 
     public Long getId() {
@@ -47,11 +47,11 @@ public class NoteModel {
     }
 
     public String getDecription() {
-        return decription;
+        return description;
     }
 
     public void setDecription(String decription) {
-        this.decription = decription;
+        this.description = decription;
     }
 
 }
