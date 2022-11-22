@@ -17,7 +17,9 @@ public class NoteModel {
     private Long id;
 
     private int age;
-    private String decription;
+
+    @Column(nullable = false)
+    private String description;
 
     public NoteModel() {
     }
