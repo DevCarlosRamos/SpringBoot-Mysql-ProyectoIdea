@@ -42,8 +42,14 @@ public class NoteController {
 
     // Elimina una publicacion
     @DeleteMapping(path = "/{id}")
-    public boolean removeNote(@PathVariable("id") Long id) {
-        return noteService.removeNote(id);
+    public String removeNote(@PathVariable("id") Long id) {
+        boolean ok = noteService.removeNote(id);
+
+        if (ok) {
+            return "La publicación " + id + "a sido eliminada ";
+        } else {
+            return "La publicación " + id + "no a sido eliminada ";
+        }
     }
 
 }

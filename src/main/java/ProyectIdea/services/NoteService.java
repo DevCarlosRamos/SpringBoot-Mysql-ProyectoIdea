@@ -33,6 +33,7 @@ public class NoteService {
     // Elimina una fila
     public boolean removeNote(Long id) {
 
+        noteRepository.deleteById(id);
         try {
             noteRepository.deleteById(id);
             return true;
